@@ -30,7 +30,7 @@ int read_csv() {
   read(w, content, s.st_size);
   close(w);
   
-  printf("%s\n", content);
+  int 
 }
 
 int read_data() {
