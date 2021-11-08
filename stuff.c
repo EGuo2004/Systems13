@@ -37,7 +37,7 @@ int read_csv() {
   }
   rowsneeded--;
   struct pop_entry *information = malloc(perrowsize * rowsneeded);
-
+return 0;
 }
 
 // int read_data() {
