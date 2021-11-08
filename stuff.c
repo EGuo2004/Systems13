@@ -32,12 +32,12 @@ int read_csv() {
   rowsneeded = 0;
   int counter;
   for (counter = 0; content[counter] != NULL; counter++){
-  if (content[counter] == '\n'){
-    rowsneeded++;
+    if (content[counter] == '\n'){
+      rowsneeded++;
+    }
+    rowsneeded--;
+    struct pop_entry *information = malloc(perrowsize * rowsneeded);
   }
-  rowsneeded--;
-  struct pop_entry *information = malloc(perrowsize * rowsneeded);
-return 0;
 }
 
 // int read_data() {
