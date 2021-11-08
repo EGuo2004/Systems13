@@ -1,8 +1,9 @@
-all: main.o
-	gcc -o thirteen main.o
+all: stuff.o
+	gcc -o thirteen stuff.o
 	
-main.o: main.c
-	gcc -c main.c
+
+stuff.o: stuff.c
+	gcc -c stuff.c
 
 run:
 	./thirteen

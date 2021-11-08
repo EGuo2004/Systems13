@@ -16,12 +16,9 @@ struct pop_entry {
   char boro[15];
 };
 
-int main(){
-  read_csv();
-}
-
 int read_csv() {
   int w;
+  int perrowsize = sizeof(struct pop_entry) * 5;
   w = open("nyc_pop.csv",O_RDONLY);
   struct stat s;
   stat("nyc_pop.csv", &s);
@@ -29,8 +26,18 @@ int read_csv() {
   content = malloc(s.st_size);
   read(w, content, s.st_size);
   close(w);
-  
-  int 
+  char *buffer = content;
+  printf("%s\n",buffer);
+  int rowsneeded;
+  rowsneeded = 0;
+  int counter;
+  for (counter = 0; content[counter] != NULL; counter++){
+  if (content[counter] == '\n'){
+    rowsneeded++;
+  }
+  rowsneeded--;
+  struct pop_entry *information = malloc(perrowsize * rowsneeded);
+
 }
 
 int read_data() {
