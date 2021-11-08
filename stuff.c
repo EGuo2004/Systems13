@@ -31,7 +31,7 @@ int read_csv() {
   int rowsneeded;
   rowsneeded = 0;
   int counter;
-  for (counter = 0; content[counter] != NULL; counter++){
+  for (counter = 0; content[counter] != '\0'; counter++){
     if (content[counter] == '\n'){
       rowsneeded++;
     }
