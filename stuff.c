@@ -8,13 +8,17 @@
 int read_csv();
 int read_data();
 int update_data();
-// int main();
+int main();
 
 struct pop_entry {
   int year;
   int population;
   char boro[15];
 };
+
+int main() {
+  read_csv();
+}
 
 int read_csv() {
   int w;
